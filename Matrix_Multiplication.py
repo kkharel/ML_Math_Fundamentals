@@ -34,9 +34,11 @@ def sparse_matrix_multiplication(matrix_a, matrix_b):
     if column_a != row_b:
         raise ValueError("Matrix Multiplication not valid")
 
+    # Create dictionaries for sparse matrices
     sparse_a = get_dict(matrix_a)
     sparse_b = get_dict(matrix_b)
 
+    # Initialize the result matrix as a list of lists filled with 0's
     matrix_c = [[0*len(matrix_b[0]) for _ in range(column_b)] for _ in range(row_a)]
 
     for (i, k) in sparse_a:
@@ -53,6 +55,7 @@ def get_dict(matrix):
             if matrix[i][j] != 0:
                 dictionary[(i, j)] = matrix[i][j]
     return dictionary
+
 
 
 mat1 = [[1,0,0],[0,1,0],[1,0,0]]
