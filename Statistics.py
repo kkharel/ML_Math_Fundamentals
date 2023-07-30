@@ -1,5 +1,4 @@
 def get_statistics(input_list):
-    # Write your code here.
     return {
         "mean": mean(input_list),
         "median": median(input_list),
@@ -41,7 +40,7 @@ def mode(arr):
 
 def sample_variance(arr):
     n = len(arr)
-    mean = sum(arr)/n # check here later
+    mean = sum(arr)/n 
     sq_diff = []
     for i in arr:
         difference = i - mean
